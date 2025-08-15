@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Carbon Story</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>My Carbon Story</h1>
+            <p>Calculate your daily footprint with fun facts!</p>
+        </header>
+
+        <nav class="tab-navigation">
+            <button class="tab-button active" data-tab="calculator-tab">Calculator</button>
+            <button class="tab-button" data-tab="carbon-hero-tab">Carbon Hero</button>
+            <button class="tab-button" data-tab="info-tab">Learn More</button>
+        </nav>
+
+        <main class="main-content">
+            <div id="calculator-tab" class="tab-content active">
+                <div class="calculator-section">
+                    <div class="input-group">
+                        <label for="activity-select">Choose an activity:</label>
+                        <select id="activity-select">
+                            <option value="Petrol car (Global Average)">Driving a petrol car</option>
+                            <option value="National rail (Global Average)">Taking the train</option>
+                            <option value="Coach (bus) (Global Average)">Going by bus</option>
+                            <option value="Domestic flight (Global Average)">Taking a flight</option>
+                            <option value="Beef burger">Eating a beef burger</option>
+                            <option value="Beef steak">Eating a beef steak</option>
+                            <option value="Chicken breast">Eating chicken breast</option>
+                            <option value="Tofu">Eating tofu</option>
+                            <option value="Potatoes">Eating potatoes</option>
+                            <option value="Rice">Eating rice</option>
+                            <option value="Cow's milk">Drinking milk</option>
+                            <option value="Almond milk">Drinking almond milk</option>
+                            <option value="Tea">Drinking tea</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="quantity-input">Enter a quantity:</label>
+                        <input type="number" id="quantity-input" value="1" min="1">
+                        <span id="unit-label"></span>
+                    </div>
+
+                    <button id="generate-button">Generate Story</button>
+
+                    <div class="story-box" id="story-display">
+                        Your carbon story will appear here!
+                    </div>
+                </div>
+            </div>
+
+            <div id="carbon-hero-tab" class="tab-content">
+                <div class="carbon-hero-challenge">
+                    <h3>Carbon Hero Challenge!</h3>
+                    <div class="card-container">
+                        <div class="card" id="challenge-card">
+                            <div class="card-front">
+                                <p id="challenge-question">Let's start the first challenge!</p>
+                                <img id="front-icon" src="assets/default_icon.png" alt="Challenge icon">
+                            </div>
+                            <div class="card-back">
+                                <img id="back-icon" src="" alt="Result icon">
+                                <p id="back-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="challenge-buttons">
+                        <button id="choice-a-button">Choice A</button>
+                        <button id="choice-b-button">Choice B</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="info-tab" class="tab-content">
+                <div class="info-section">
+                    <h2>Learn More</h2>
+                    <img src="assets/infographic.png" alt="Infographic about carbon footprint" class="infographic">
+                    <video controls>
+                        <source src="assets/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
